@@ -3,7 +3,8 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:sca_ui_imp/shared/app_colors.dart';
 import 'package:sca_ui_imp/shared/assets.dart';
 import 'package:sca_ui_imp/shared/navigation/app_router.dart';
-
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+//added ScreenUtilInit package
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
 
@@ -31,7 +32,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   textAlign: TextAlign.start,
                   style: style.copyWith(
                     color: AppColors.white,
-                    fontSize: 25,
+                    fontSize: 25.spMin,
                     fontWeight: FontWeight.w600,
                   ),
                 ),
@@ -40,7 +41,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   textAlign: TextAlign.start,
                   style: style.copyWith(
                     color: AppColors.white,
-                    fontSize: 16,
+                    fontSize: 16.spMin,
                     fontWeight: FontWeight.w500,
                   ),
                 ),
@@ -50,21 +51,21 @@ class _HomeScreenState extends State<HomeScreen> {
         ),
         actions: [
           SvgPicture.asset(AppAssets.notificationIcon),
-          const SizedBox(
-            width: 20,
+          SizedBox(
+            width: 20.w,
           )
         ],
       ),
       body: Column(
         children: [
-          const SizedBox(
-            height: 20,
+           SizedBox(
+            height: 20.h,
           ),
           Stack(
             children: [
               Container(
                 margin: const EdgeInsets.only(top: 40),
-                height: 100,
+                height: 100.h,
                 decoration: const BoxDecoration(
                   color: AppColors.white,
                   borderRadius: BorderRadius.only(
@@ -79,8 +80,8 @@ class _HomeScreenState extends State<HomeScreen> {
                   mainAxisSize: MainAxisSize.min,
                   children: [
                     imageBuilder(key: const ValueKey('profile_img')),
-                    const SizedBox(
-                      height: 10,
+                     SizedBox(
+                      height: 10.h,
                     ),
                     SvgPicture.asset(AppAssets.rankIcon)
                   ],
@@ -107,34 +108,34 @@ class _HomeScreenState extends State<HomeScreen> {
                               TextSpan(
                                 text: " place",
                                 style: style.copyWith(
-                                  fontSize: 27,
+                                  fontSize: 27.spMin,
                                   fontWeight: FontWeight.w600,
                                   color: AppColors.appColor,
                                 ),
                               ),
                             ],
                             style: style.copyWith(
-                              fontSize: 27,
+                              fontSize: 27.spMin,
                               fontWeight: FontWeight.w600,
                             ),
                           ),
                         ),
                       ],
                     ),
-                    const SizedBox(
-                      height: 20,
+                    SizedBox(
+                      height: 20.h,
                     ),
                     Container(
                       padding: const EdgeInsets.symmetric(
                         horizontal: 20,
                       ),
-                      height: 51,
+                      height: 51.h,
                       child: Row(
                         children: [
                           Expanded(
                             child: TextFormField(
                               style: style.copyWith(
-                                fontSize: 16,
+                                fontSize: 16.spMin,
                                 fontWeight: FontWeight.w500,
                                 color: AppColors.black,
                               ),
@@ -145,19 +146,19 @@ class _HomeScreenState extends State<HomeScreen> {
                                 prefixIcon: Row(
                                   mainAxisSize: MainAxisSize.min,
                                   children: [
-                                    const SizedBox(
-                                      width: 15,
+                                     SizedBox(
+                                      width: 15.w,
                                     ),
                                     SvgPicture.asset(
                                       AppAssets.searchIcon,
-                                      height: 25,
-                                      width: 25,
+                                      height: 25.h,
+                                      width: 25.w,
                                     ),
                                   ],
                                 ),
                                 hintText: "Search Now",
                                 hintStyle: style.copyWith(
-                                  fontSize: 16,
+                                  fontSize: 16.spMin,
                                   color: AppColors.appColor,
                                   fontWeight: FontWeight.w400,
                                 ),
@@ -186,15 +187,15 @@ class _HomeScreenState extends State<HomeScreen> {
                               ),
                             ),
                           ),
-                          const SizedBox(
-                            width: 20,
+                         SizedBox(
+                            width: 20.w,
                           ),
                           SvgPicture.asset(AppAssets.filterIcon)
                         ],
                       ),
                     ),
                     SizedBox(
-                      height: 150,
+                      height: 150.h,
                       child: ListView(
                         scrollDirection: Axis.horizontal,
                         children: [
@@ -227,7 +228,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           Text(
                             "Recommended for You",
                             style: style.copyWith(
-                              fontSize: 18,
+                              fontSize: 18.spMin,
                               fontWeight: FontWeight.w600,
                             ),
                           ),
@@ -236,8 +237,8 @@ class _HomeScreenState extends State<HomeScreen> {
                               top: 20,
                               bottom: 100,
                             ),
-                            separatorBuilder: (_, __) => const SizedBox(
-                              height: 20,
+                            separatorBuilder: (_, __) => SizedBox(
+                              height: 20.h,
                             ),
                             physics: const NeverScrollableScrollPhysics(),
                             shrinkWrap: true,
@@ -268,8 +269,8 @@ class _HomeScreenState extends State<HomeScreen> {
                                             "https://unsplash.com/photos/0g4OCfUAhuY/download?ixid=M3wxMjA3fDB8MXxzZWFyY2h8NHx8Z3JlZW50b3dufGVufDB8fHx8MTczODE1NzUzMXww&force=true&w=2400",
                                         key: valueKey,
                                       ),
-                                      const SizedBox(
-                                        width: 25,
+                                       SizedBox(
+                                        width: 25.w,
                                       ),
                                       Column(
                                         crossAxisAlignment:
@@ -278,14 +279,14 @@ class _HomeScreenState extends State<HomeScreen> {
                                           Text(
                                             "876 Green town",
                                             style: style.copyWith(
-                                              fontSize: 17,
+                                              fontSize: 17.spMin,
                                               fontWeight: FontWeight.w600,
                                             ),
                                           ),
                                           Text(
                                             "Rosaville",
                                             style: style.copyWith(
-                                                fontSize: 17,
+                                                fontSize: 17.spMin,
                                                 fontWeight: FontWeight.w400,
                                                 color: AppColors.greyText),
                                           ),
@@ -293,13 +294,13 @@ class _HomeScreenState extends State<HomeScreen> {
                                             children: [
                                               SvgPicture.asset(
                                                   AppAssets.yellowStarIcon),
-                                              const SizedBox(
-                                                width: 3,
+                                               SizedBox(
+                                                width: 3.w,
                                               ),
                                               Text(
                                                 "4.9",
                                                 style: style.copyWith(
-                                                  fontSize: 16,
+                                                  fontSize: 16.spMin,
                                                   fontWeight: FontWeight.w400,
                                                 ),
                                               ),
@@ -333,8 +334,8 @@ class _HomeScreenState extends State<HomeScreen> {
       children: [
         Container(
           margin: EdgeInsets.only(right: 15, left: isFirst ? 20 : 0),
-          height: 113,
-          width: 113,
+          height: 113.h,
+          width: 113.w,
           decoration: BoxDecoration(
             boxShadow: [
               BoxShadow(
@@ -349,13 +350,13 @@ class _HomeScreenState extends State<HomeScreen> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               SvgPicture.asset(asset),
-              const SizedBox(
-                height: 10,
+               SizedBox(
+                height: 10.h,
               ),
               Text(
                 title,
                 style: style.copyWith(
-                  fontSize: 14,
+                  fontSize: 14.spMin,
                   fontWeight: FontWeight.w400,
                   color: AppColors.black,
                 ),
